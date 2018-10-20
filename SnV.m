@@ -32,8 +32,8 @@ mseB = sum(sum(mseBImage)) / (rows * columns);
 
 % A(:,:,1) would mean all rows and all columns in the first image plane - in other words, the red channel of the image.
 
-% Average mean square error of R, G, B.
-mse = (mseR + mseG + mseB)/3;
+% Average mean square error of R, G, B. mse -> (x,y) = sum(V(i,j) - V)^2
+mse = (mseR + mseG + mseB)/3; 
 
 % Calculate PSNR (Peak Signal to noise ratio).
 PSNR_Value = 10 * log10( 255^2 / mse);
